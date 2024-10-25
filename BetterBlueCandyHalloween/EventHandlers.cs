@@ -20,7 +20,7 @@ namespace BetterBlueCandyHalloween
     {
         public override string Author => "Bankokwak";
         public override string Name => "Better Blue Candy Halloween";
-        public override Version Version => new Version(1, 0, 0);
+        public override Version Version => new Version(1, 0, 1);
         public override Version RequiredExiledVersion { get; } = new Version(8, 13, 1);
         public override void OnEnabled()
         {
@@ -45,6 +45,7 @@ namespace BetterBlueCandyHalloween
                 ev.Player.CurrentItem.Destroy();
                 ev.Player.DropItems();
                 ev.Player.Role.Set(RoleTypeId.Tutorial);
+                ev.Player.IsGodModeEnabled = false;
                 ev.Player.Position = posPlayer;
                 ev.Player.Health = healthPlayer;
                 ev.Player.EnableEffect(EffectType.Marshmallow);
