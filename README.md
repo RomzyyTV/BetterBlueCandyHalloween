@@ -1,6 +1,6 @@
 # BetterBlueCandyHalloween for EXILED
 
-![downloads](https://img.shields.io/github/downloads/Bankokwak/BetterBlueCandyHalloween/total)
+![downloads](https://img.shields.io/github/downloads/Bankokwak/BetterBlueCandyHalloween/total.svg)
 
 ### Features:
 - Teamkill your ally
