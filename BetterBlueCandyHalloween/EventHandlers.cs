@@ -14,26 +14,9 @@ using UnityEngine;
 using Player = Exiled.Events.Handlers.Player;
 using Version = System.Version;
 
-namespace BetterBlueCandyHalloween
-{
-    public class EventHandlers : Plugin<Config>
+namespace BetterBlueCandyHalloween;
+    public class EventHandlers
     {
-        public override string Author => "Bankokwak";
-        public override string Name => "Better Blue Candy Halloween";
-        public override Version Version => new Version(1, 0, 1);
-        public override Version RequiredExiledVersion { get; } = new Version(8, 13, 1);
-        public override void OnEnabled()
-        {
-            Exiled.Events.Handlers.Scp330.EatingScp330 += OnEat;
-            base.OnEnabled();
-        }
-    
-        public override void OnDisabled()
-        {
-            Exiled.Events.Handlers.Scp330.EatingScp330 -= OnEat;
-            base.OnDisabled();
-        }
-        
         private void OnEat(EatingScp330EventArgs ev)
         {
             if (ev.Candy.Kind == CandyKindID.Blue)
@@ -64,4 +47,3 @@ namespace BetterBlueCandyHalloween
             }
         }
     }
-}
